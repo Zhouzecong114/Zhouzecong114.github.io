@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Me | Zecong Zhou</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<nav class="nav">
+			<a class="brand" href="index.html#home">璁璁.com</a>
+			<button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+			<ul id="nav-menu" class="nav-menu">
+				<li><a href="index.html#home">Home</a></li>
+				<li><a href="index.html#about">About</a></li>
+				<li><a href="index.html#portfolio">Portfolio</a></li>
+				<li><a href="index.html#awards">Awards</a></li>
+				<li><a href="index.html#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="about-full" class="section">
+			<div class="container">
+
+				<!-- Second Part: exp1/exp2 and Chinese text on left, exp3-6 on right -->
+				<div class="about-part-2">
+					<div class="about-part-2-left">
+						<div class="about-exp-gallery-top">
+							<div class="exp-frame"><img src="assets/images/exp1.jpg" alt="Experience 1"></div>
+							<div class="exp-frame"><img src="assets/images/exp2.jpg" alt="Experience 2"></div>
+						</div>
+						<div class="about-text-card">
+							<h3>It is also about me</h3>
+							<p>While studying as an undergraduate, I gained experience in modeling through commercial work and campus projects,
+                            collaborating with fashion design students on their graduation photoshoots. I also appeared in the “Luo Zhongli Art
+                            Plaza” fashion show at the Sichuan Fine Arts Institute for three consecutive years. I hope to continue balancing my
+                            studies and interests, using this passion to grow in more areas.</p>
+						</div>
+					</div>
+					<div class="about-part-2-right">
+						<div class="about-exp-gallery-right">
+							<div class="exp-frame"><img src="assets/images/exp3.jpg" alt="Experience 3"></div>
+							<div class="exp-frame"><img src="assets/images/exp4.jpg" alt="Experience 4"></div>
+							<div class="exp-frame"><img src="assets/images/exp5.jpg" alt="Experience 5"></div>
+							<div class="exp-frame"><img src="assets/images/exp6.jpg" alt="Experience 6"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Third Part: Description and Sibling Gallery -->
+				<div class="about-part-3">
+					<div class="sibling-gallery-wrapper">
+						<ul class="results">
+							<li class="result">
+								<a href="#"><img src="assets/images/exp7.jpg" width="500" height="500" alt="Experience 7"></a>
+							</li>
+							<li class="result">
+								<a href="#"><img src="assets/images/exp8.jpg" width="500" height="500" alt="Experience 8"></a>
+							</li>
+							<li class="result">
+								<a href="#"><img src="assets/images/exp9.jpg" width="500" height="500" alt="Experience 9"></a>
+							</li>
+							<li class="result">
+								<a href="#"><img src="assets/images/exp10.jpg" width="500" height="500" alt="Experience 10"></a>
+							</li>
+							<li class="result">
+								<a href="#"><img src="assets/images/exp11.jpg" width="500" height="500" alt="Experience 11"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		// mobile nav toggle
+		const toggle = document.querySelector('.nav-toggle');
+		const menu = document.getElementById('nav-menu');
+		toggle.addEventListener('click', () => {
+			const expanded = toggle.getAttribute('aria-expanded') === 'true';
+			toggle.setAttribute('aria-expanded', String(!expanded));
+			menu.classList.toggle('open');
+		});
+		// close menu on link click (mobile)
+		menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+			menu.classList.remove('open');
+			toggle.setAttribute('aria-expanded', 'false');
+		}));
+	</script>
+</body>
+</html>
+
